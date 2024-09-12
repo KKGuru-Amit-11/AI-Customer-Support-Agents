@@ -10,14 +10,14 @@ from langchain_groq import ChatGroq
 from tools import search_tool,scrape_tool
 
 # LLM Monitering
-os.environ['LANGCHAIN_API_KEY']='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'
+os.environ['LANGCHAIN_API_KEY']=st.secrets['LANGCHAIN_API_KEY']
 os.environ['LANCHAIN_PROJECT']='Customer Support Moniter'
 os.environ['LANGCHAIN_TRACING_V2']='true'
 os.environ['LANGCHAIN_ENDPOINT']="https://api.smith.langchain.com"
 
 
 # # Creating LLM Model
-# os.environ['GOOGLE_API_KEY']='AIzaSyD5ggkVEWVzFE3NaFa73a0MHuJPmkT3U8M'
+# os.environ['GOOGLE_API_KEY']=st.secrets['GOOGLE_API_KEY']
 # llm_model = ChatGoogleGenerativeAI(model='gemini-1.5-flash',
 #                                    api_key=os.getenv('GOOGLE_API_KEY'))
 
