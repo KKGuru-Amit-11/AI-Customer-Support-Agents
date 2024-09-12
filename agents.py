@@ -22,7 +22,7 @@ os.environ['LANGCHAIN_ENDPOINT']="https://api.smith.langchain.com"
 #                                    api_key=os.getenv('GOOGLE_API_KEY'))
 
 # Creating LLM Model
-os.environ['GROQ_API_KEY']='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'
+os.environ['GROQ_API_KEY']=st.secrets['GROQ_API_KEY']
 llm_model = ChatGroq(model='llama3-8b-8192',api_key=os.getenv('GROQ_API_KEY'))
 
 # Creating Agent
