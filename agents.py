@@ -11,7 +11,7 @@ from langchain_groq import ChatGroq
 from tools import search_tool,scrape_tool
 
 # LLM Monitering
-os.environ['LANGCHAIN_API_KEY']=st.secrets['LANGCHAIN_API_KEY']
+os.environ['LANGCHAIN_API_KEY']=st.secrets['LANGSMITH_API_KEY']
 os.environ['LANCHAIN_PROJECT']='Customer Support Moniter'
 os.environ['LANGCHAIN_TRACING_V2']='true'
 os.environ['LANGCHAIN_ENDPOINT']="https://api.smith.langchain.com"
