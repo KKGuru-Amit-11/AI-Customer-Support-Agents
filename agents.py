@@ -9,7 +9,7 @@ from crewai import Agent
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_groq import ChatGroq
 from tools import search_tool,scrape_tool
-from crew import model_name
+# from crew import model_name
 
 # LLM Monitering
 os.environ['LANGCHAIN_API_KEY']=st.secrets['LANGSMITH_API_KEY']
