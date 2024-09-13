@@ -9,25 +9,12 @@ from crewai import Agent
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_groq import ChatGroq
 from tools import search_tool,scrape_tool
-# from crew import model_name
 
 # LLM Monitering
 os.environ['LANGCHAIN_API_KEY']=st.secrets['LANGSMITH_API_KEY']
 os.environ['LANCHAIN_PROJECT']='Customer Support Moniter'
 os.environ['LANGCHAIN_TRACING_V2']='true'
 os.environ['LANGCHAIN_ENDPOINT']="https://api.smith.langchain.com"
-
-# Getting Task From Web
-with st.form(key='Query',clear_on_submit=True):
-    cus_name=st.text_input(label='**Enter Your Name:**')
-    cus_inquiry=st.text_input(label='**Enter Your Inquiry:**')
-    model_name=st.selectbox(label='**Select Model Name:**', options=["Gemini Model","Groq Model"],index=None)
-    submit_button = st.form_submit_button('Submit.')
-    if submit_button:
-        st.info('Input Details...')
-        st.markdown(f'Customer Name: {cus_name} ...')
-        st.markdown(f'Inquiry: {cus_inquiry} ...')
-        st.markdown(f'Model Name: {model_name} ...')
 
 
 # # Creating LLM Model
