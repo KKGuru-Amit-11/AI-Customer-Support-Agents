@@ -5,6 +5,7 @@ from agents import support_agent,support_quality_assurance_agent,llm_model
 from tasks import inquiry_resolution,quality_assurance_review
 
 # Creating Header for web Page:
+st.title('TechShiney')
 st.header('**Multi AI Agent Customer Support...**')
 
 crew = Crew(
