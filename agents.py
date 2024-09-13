@@ -17,6 +17,19 @@ os.environ['LANCHAIN_PROJECT']='Customer Support Moniter'
 os.environ['LANGCHAIN_TRACING_V2']='true'
 os.environ['LANGCHAIN_ENDPOINT']="https://api.smith.langchain.com"
 
+# Getting Task From Web
+with st.form(key='Query',clear_on_submit=True):
+    cus_name=st.text_input(label='**Enter Your Name:**')
+    cus_inquiry=st.text_input(label='**Enter Your Inquiry:**')
+    model_name=st.selectbox(label='**Select Model Name:**', options=["Gemini Model","Groq Model"],index=None)
+    submit_button = st.form_submit_button('Submit.')
+    if submit_button:
+        st.info('Input Details...')
+        st.markdown(f'Customer Name: {cus_name} ...')
+        st.markdown(f'Inquiry: {cus_inquiry} ...')
+        st.markdown(f'Model Name: {model_name} ...')
+
+
 # # Creating LLM Model
 def model_selection(value):
     if value == 'Gemini Model':
