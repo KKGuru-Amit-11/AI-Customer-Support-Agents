@@ -11,14 +11,14 @@ from langchain_groq import ChatGroq
 from tools import search_tool,scrape_tool
 
 # LLM Monitering
-os.environ['LANGCHAIN_API_KEY']=st.secrets['LANGSMITH_API_KEY']
+os.environ['LANGCHAIN_API_KEY']='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'
 os.environ['LANCHAIN_PROJECT']='Customer Support Moniter'
 os.environ['LANGCHAIN_TRACING_V2']='true'
 os.environ['LANGCHAIN_ENDPOINT']="https://api.smith.langchain.com"
 
 
 # Creating LLM Model
-os.environ['GROQ_API_KEY']=st.secrets['GROQ_API_KEY']
+os.environ['GROQ_API_KEY']='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'
 llm_model = ChatGroq(model='llama3-8b-8192',api_key=os.getenv('GROQ_API_KEY'))
 
 # Creating Agent
