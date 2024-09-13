@@ -37,7 +37,7 @@ llm_model = ChatGroq(model='llama3-8b-8192',api_key=os.getenv('GROQ_API_KEY'))
 support_agent = Agent(
     role='Senior Support Representative',
     goal='Be Most Friendly and Helpful',
-    backstory='''you are working at techshiney (https://techshiney.com/) and you are 
+    backstory='''you are working at cetpa infotech (https://www.cetpainfotech.com/) and you are 
     now working on providing support to {customer}, a super 
     important customer for your company you need to make sure that you 
     provide the best support for their inquiry. Make Sure to provide full 
@@ -51,7 +51,7 @@ support_agent = Agent(
 support_quality_assurance_agent= Agent(
     role='Support Quality Assurance Specialist',
     goal='Get Recognition for Providing the best support Quality Assurance in your team',
-    backstory='''You are work at techshiney (https://techshiney.com/) and you are wokring 
+    backstory='''You are work at cetpa infotech (https://www.cetpainfotech.com/) and you are wokring 
     with your team on a request from {customer}. ensuring that the support representative 
     is providing the best support possible. you need to make sure that the support 
     representative is providing full complete answers, and make no assumption''',
