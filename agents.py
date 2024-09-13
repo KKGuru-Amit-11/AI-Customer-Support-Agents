@@ -6,7 +6,7 @@
 import os
 import streamlit as st
 from crewai import Agent
-from langchain_google_genai import ChatGoogleGenerativeAI
+# from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_groq import ChatGroq
 from tools import search_tool,scrape_tool
 
