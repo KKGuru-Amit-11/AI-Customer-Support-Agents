@@ -11,7 +11,7 @@ crew = Crew(
     agents=[support_agent,support_quality_assurance_agent],
     tasks=[inquiry_resolution,quality_assurance_review],
     manager_llm=llm_model,
-    process=Process.hierarchical,
+    process=Process.sequential,
     verbose=True
 )
 
@@ -19,7 +19,6 @@ crew = Crew(
 with st.form(key='Query',clear_on_submit=True):
     cus_name=st.text_input(label='**Enter Your Name:**')
     cus_inquiry=st.text_input(label='**Enter Your Inquiry:**')
-    # model_name=st.selectbox(label='**Select Model Name:**', options=["Gemini Model","Groq Model"],index=None)
     submit_button = st.form_submit_button('Submit.')
     if submit_button:
         st.info('Input Details...')
