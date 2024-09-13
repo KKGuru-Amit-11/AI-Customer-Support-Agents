@@ -21,7 +21,7 @@ quality_assurance_review = Task(
     customer's inquiry have been addressed throughly with a helpful and friendly tone. check 
     for references and sources used to find the information, ensuring the response is well-support 
     and leaves no questions unanswered for their enquiry.''',
-    expected_output='''A Final, detailed, informative and short to the point response ready to be send to the customer
+    expected_output='''A Final, detailed, informative and to the point response ready to be send to the customer
     This response should fully addess the customer's inquiry, incorporating all relevant 
     feadback and  improvment. don't be too formal, we are a chill and cool company but 
     maintain a professional and friendly tone throughout''',
