@@ -1,11 +1,8 @@
 # Import Requred Library
 import streamlit as st
 from crewai import Crew,Process
-from agents import support_agent,support_quality_assurance_agent,llm_model
+from agents import support_agent,support_quality_assurance_agent,llm_model,cus_name,cus_inquiry
 from tasks import inquiry_resolution,quality_assurance_review
-
-# Creating Header for web Page:
-st.header('**Multi AI Agent Customer Support...**')
 
 crew = Crew(
     agents=[support_agent,support_quality_assurance_agent],
@@ -14,16 +11,6 @@ crew = Crew(
     process=Process.sequential,
     verbose=True
 )
-
-# Getting Task From Web
-with st.form(key='Query',clear_on_submit=True):
-    cus_name=st.text_input(label='**Enter Your Name:**')
-    cus_inquiry=st.text_input(label='**Enter Your Inquiry:**')
-    submit_button = st.form_submit_button('Submit.')
-    if submit_button:
-        st.info('Input Details...')
-        st.markdown(f'Customer Name: {cus_name} ...')
-        st.markdown(f'Inquiry: {cus_inquiry} ...')
 
 inputs={
     'customer':cus_name,
