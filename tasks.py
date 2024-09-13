@@ -3,7 +3,7 @@ from crewai import Task
 from agents import support_agent,support_quality_assurance_agent
 
 inquiry_resolution = Task(
-    description='''{customer} just reached out with a super important inquiry ask: {inquiry}
+    description='''{customer} just reached out with a super important inquiry ask: {inquiry} 
     {customer} is the one that reached out. make sure to use everything 
     you know to provide the best support possible. you must strive to provide a complete 
     and accurate response to the customer's inquiry''',
