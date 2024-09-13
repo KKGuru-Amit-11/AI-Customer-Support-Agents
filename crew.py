@@ -11,7 +11,7 @@ crew = Crew(
     agents=[support_agent,support_quality_assurance_agent],
     tasks=[inquiry_resolution,quality_assurance_review],
     manager_llm=llm_model,
-    process=Process.sequential,
+    process=Process.hierarchical,
     verbose=True
 )
 
