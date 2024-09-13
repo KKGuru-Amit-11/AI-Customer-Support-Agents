@@ -18,17 +18,20 @@ os.environ['LANGCHAIN_ENDPOINT']="https://api.smith.langchain.com"
 
 
 # # Creating LLM Model
-def model_selection(value):
-    if value == 'Gemini Model':
-        os.environ['GOOGLE_API_KEY']=st.secrets['GOOGLE_API_KEY']
-        llm_model = ChatGoogleGenerativeAI(model='gemini-1.5-flash',api_key=os.getenv('GOOGLE_API_KEY'))
-        return llm_model
-    else:
-        os.environ['GROQ_API_KEY']=st.secrets['GROQ_API_KEY']
-        llm_model = ChatGroq(model='llama3-8b-8192',api_key=os.getenv('GROQ_API_KEY'))
-        return llm_model
+# def model_selection(value):
+#     if value == 'Gemini Model':
+#         os.environ['GOOGLE_API_KEY']=st.secrets['GOOGLE_API_KEY']
+#         llm_model = ChatGoogleGenerativeAI(model='gemini-1.5-flash',api_key=os.getenv('GOOGLE_API_KEY'))
+#         return llm_model
+#     else:
+#         os.environ['GROQ_API_KEY']=st.secrets['GROQ_API_KEY']
+#         llm_model = ChatGroq(model='llama3-8b-8192',api_key=os.getenv('GROQ_API_KEY'))
+#         return llm_model
 
-llm_model=model_selection(model_name)
+# llm_model=model_selection(model_name)
+
+os.environ['GOOGLE_API_KEY']=st.secrets['GOOGLE_API_KEY']
+llm_model = ChatGoogleGenerativeAI(model='gemini-1.5-flash',api_key=os.getenv('GOOGLE_API_KEY'))
 
 # Creating Agent
 support_agent = Agent(
