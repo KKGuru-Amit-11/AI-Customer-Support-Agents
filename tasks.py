@@ -10,7 +10,7 @@ inquiry_resolution = Task(
     expected_output='''A detailed, informative and response to the customer's inquiry that 
     addresses all aspects of their question. The response should include references 
     to everything external data or solutions ensure the answer is complete leaving no 
-    questions unanswered, and maintain a helpful and friendly tone throughout'''
+    questions unanswered, and maintain a helpful and friendly tone throughout''',
     agent=support_agent
 )
 
