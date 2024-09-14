@@ -10,20 +10,20 @@ inquiry_resolution = Task(
     expected_output='''A detailed, informative and response to the customer's enquiry that 
     addresses all aspects of their question. The response should include references 
     to everything external data or solutions ensure the answer is complete leaving no 
-    questions unanswered, and maintain a helpful and friendly tone throughout''',
+    questions unanswered, and maintain a helpful and friendly tone throughout''',s
     agent=support_agent
 )
 
 quality_assurance_review = Task(
-    description='''Review the response drafted by the Senior Support Representation for 
-    {customer} 's inquiry. Ensure that the answer is comprehensive,accurate, and adheres to 
+    description='''Review the response drafted by the inquiry resolution team member Representation for 
+    {customer} 's inquiry. Ensure that the answer is comprehensive, accurate, and adheres to 
     the high-quality standards expected for customer support. Verify that all parts of the 
     customer's inquiry have been addressed throughly with a helpful and friendly tone. check 
     for references and sources used to find the information, ensuring the response is well-support 
     and leaves no questions unanswered for their enquiry.''',
     expected_output='''A Final, detailed, informative and to the point response ready to be send to the customer
-    This response should fully addess the customer's inquiry, incorporating all relevant 
-    feadback and  improvment. don't be too formal, we are a chill and cool company but 
-    maintain a professional and friendly tone throughout''',
+    This response should fully address the customer's inquiry, incorporating all relevant 
+    feedback and  improvment. don't be too formal, we are a chill and cool company but 
+    maintain a professional and friendly tone throughout and best regards and note don't need to require''',
     agent=support_quality_assurance_agent
 )
