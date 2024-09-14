@@ -10,7 +10,7 @@ inquiry_resolution = Task(
     expected_output='''A detailed, informative and response to the customer's inquiry that 
     addresses all aspects of their question. The response should include references 
     to everything external data or solutions ensure the answer is complete leaving no 
-    questions unanswered, and maintain a helpful and friendly tone throughout''',
+    questions unanswered, and maintain a helpful and friendly tone throughout and best regards and note should not be mention''',
     agent=support_agent
 )
 
@@ -24,6 +24,6 @@ quality_assurance_review = Task(
     expected_output='''A Final, detailed, informative and to the point response ready to be send to the customer
     This response should fully address the customer's inquiry, incorporating all relevant 
     feedback and  improvment. don't be too formal, we are a chill and cool company but 
-    maintain a professional and friendly tone throughout and best regards and note don't need to require''',
+    maintain a professional and friendly tone throughout and best regards and note should not be mention''',
     agent=support_quality_assurance_agent
 )
